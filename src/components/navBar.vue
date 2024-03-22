@@ -1,15 +1,13 @@
 <template>
-  <v-layout class="rounded rounded-md">
-    <v-app-bar id="navBar" color="deep-purple-darken-4">
-      <img id="logo" src="@/assets/logo.png" alt="logo" />
-      <div id="buttons">
-        <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-        <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-        <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-        <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-      </div>
-    </v-app-bar>
-  </v-layout>
+  <v-app-bar id="navBar" color="deep-purple-darken-4">
+    <img id="logo" src="@/assets/logo.png" alt="logo" />
+    <div id="buttons">
+      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
+      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
+      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
+      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
+    </div>
+  </v-app-bar>
 </template>
 <!-- <template>
   <v-btn color="primary" :text="home">
@@ -48,9 +46,10 @@ const items = [
 }
 
 #logo {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   margin-left: 30px;
+  margin-top: 5px;
 }
 
 #navBar {

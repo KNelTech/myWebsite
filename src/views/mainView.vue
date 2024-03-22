@@ -1,15 +1,21 @@
 <template>
-  <div id="appMain">
+  <v-layout class="rounded rounded-md" background="black">
     <navBar />
-    <homeInfo />
-    <!-- <button @click="increment">Count up: {{ counterUp }}</button>
-    <button @click="decrement">Count down: {{ counterDown }}</button> -->
-  </div>
+
+    <v-navigation-drawer>
+      <v-list>
+        <v-list-item title="Navigation drawer"></v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <terminal />
+  </v-layout>
 </template>
 
 <script setup>
 import navBar from '../components/navBar.vue'
-import homeInfo from '../components/homeInfo.vue'
+import terminal from '../components/terminal.vue'
+// import homeInfo from '../components/homeInfo.vue'
 
 // const counterUp = ref('')
 // const counterDown = ref('')
@@ -47,4 +53,8 @@ button {
   height: 35px;
   border-radius: 12px;
 }*/
+
+#main {
+  background: black;
+}
 </style>
