@@ -32,6 +32,9 @@ import homeImage from '@/assets/download.jpg'
 </script>
 
 <style>
+#homeInfo {
+  width: 10%;
+}
 #homeInfoRow1,
 #homeInfoRow2 {
   display: flex;
