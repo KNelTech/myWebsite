@@ -1,20 +1,13 @@
 <template>
-  <v-layout class="rounded rounded-md" background="black">
+  <v-layout class="layout-container rounded rounded-md" background="black">
     <navBar />
-
-    <v-navigation-drawer>
-      <v-list>
-        <v-list-item title="Navigation drawer"></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <terminal />
+    <interactiveTerminal />
   </v-layout>
 </template>
 
 <script setup>
 import navBar from '../components/navBar.vue'
-import terminal from '../components/terminal.vue'
+import interactiveTerminal from '../components/interactiveTerminal.vue'
 // import homeInfo from '../components/homeInfo.vue'
 
 // const counterUp = ref('')
@@ -54,7 +47,14 @@ button {
   border-radius: 12px;
 }*/
 
-#main {
-  background: black;
+#navDrawer {
+  border-right: 5px;
+  border-style: solid;
+  border-color: rgb(0, 255, 42);
+}
+
+.layout-container {
+  width: 100vw;
+  height: 100vh;
 }
 </style>

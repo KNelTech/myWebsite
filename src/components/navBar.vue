@@ -1,58 +1,57 @@
 <template>
-  <v-app-bar id="navBar" color="deep-purple-darken-4">
-    <img id="logo" src="@/assets/logo.png" alt="logo" />
+  <v-app-bar id="navBar" color="black">
+    <v-icon id="terminalIcon" icon="mdi-console" size="50px"></v-icon>
     <div id="buttons">
-      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
-      <v-btn append-icon="mdi-home-lightning-bolt" text="Home" variant="elevated" />
+      <v-tooltip text="home">
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" color="green-accent-3" icon="mdi-home" variant="elevated"></v-btn>
+        </template>
+      </v-tooltip>
+      <v-tooltip text="projects" color="yellow-accent-3">
+        <template v-slot:activator="{ props }">
+          <v-btn
+            v-bind="props"
+            color="yellow-accent-3"
+            icon="mdi-file-code"
+            variant="elevated"
+          ></v-btn>
+        </template>
+      </v-tooltip>
+      <v-tooltip text="contact me">
+        <template v-slot:activator="{ props }">
+          <v-btn
+            v-bind="props"
+            color="red-accent-3"
+            icon="mdi-account-box"
+            variant="elevated"
+          ></v-btn>
+        </template>
+      </v-tooltip>
     </div>
   </v-app-bar>
 </template>
-<!-- <template>
-  <v-btn color="primary" :text="home">
-    <v-menu activator="parent">
-      <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index" :value="index">
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-  </v-btn>
-</template>
 
-<script setup>
-defineProps({
-  home: { type: String, default: 'Home' }
-})
-
-const items = [
-  { title: 'Click Me' },
-  { title: 'Click Me' },
-  { title: 'Click Me' },
-  { title: 'Click Me 2' }
-]
-</script> -->
+<script setup></script>
 
 <style>
 #buttons {
   display: flex;
   flex-direction: row;
   gap: 3%;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  margin-right: 30px;
-}
-
-#logo {
-  width: 55px;
-  height: 55px;
-  margin-left: 30px;
-  margin-top: 5px;
+  justify-content: flex-end;
+  margin-right: 60px;
 }
 
 #navBar {
   height: 70px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: rgb(44, 44, 44);
+  color: white;
+}
+
+#terminalIcon {
+  margin-left: 60px;
 }
 </style>

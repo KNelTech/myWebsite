@@ -6,10 +6,14 @@
   font-weight: normal;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   min-height: 100vh;
   color: #fff;
-  background: rgb(22, 22, 22);
+  background: rgb(0, 0, 0);
   transition:
     color 0.5s,
     background-color 0.5s;
