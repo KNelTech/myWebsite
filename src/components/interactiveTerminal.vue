@@ -1,6 +1,6 @@
 <template>
   <div class="terminalInteractive rounded" ref="modal">
-    <div class="drag-bar" @mousedown="mouseDownHandler"></div>
+    <div class="drag-bar-terminalInteractive" @mousedown="mouseDownHandler"></div>
     <pre id="titleASCII">
 
 ███████╗ ██████╗  ██████╗ ████████╗     ██████╗ ██╗   ██╗███╗   ██╗    ██████╗ ███████╗██╗   ██╗
@@ -21,7 +21,7 @@ let offsetX = 0
 let offsetY = 0
 
 function mouseDownHandler(event) {
-  if (event.target.classList.contains('drag-bar')) {
+  if (event.target.classList.contains('drag-bar-terminalInteractive')) {
     offsetX = event.clientX - modal.value.getBoundingClientRect().left
     offsetY = event.clientY - modal.value.getBoundingClientRect().top
 
@@ -58,7 +58,7 @@ document.addEventListener('mousedown', () => {
 </script>
 
 <style>
-.drag-bar {
+.drag-bar-terminalInteractive {
   cursor: grab;
   height: 20px;
   width: 100%;
@@ -70,7 +70,6 @@ document.addEventListener('mousedown', () => {
   padding: 20px;
   text-align: left;
   font-weight: bold;
-  margin-top: 5px;
   background: linear-gradient(0deg, #000, #272727) !important;
   height: 45vh;
   position: absolute;
