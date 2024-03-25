@@ -41,16 +41,6 @@ function drag(event) {
   modal.value.style.top = `${newY}px`
 }
 
-// function drag(event) {
-//   let newX = event.clientX - offsetX
-//   let newY = event.clientY - offsetY
-
-//   newX = Math.max(0, Math.min(newX, window.innerWidth - modal.value.offsetWidth))
-//   newY = Math.max(0, Math.min(newY, window.innerHeight - modal.value.offsetHeight))
-
-//   modal.value.style.transform = `translate(${newX}px, ${newY}px)`
-// }
-
 function stopDrag() {
   document.removeEventListener('mousemove', drag)
   document.removeEventListener('mouseup', stopDrag)
