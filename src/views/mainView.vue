@@ -1,13 +1,37 @@
 <template>
-  <v-layout class="layout-container rounded rounded-md" background="black">
+  <v-layout>
     <navBar />
-    <interactiveTerminal />
+    <v-main class="layout-container">
+      <v-row no-gutters>
+        <v-col>
+          <interactiveTerminal class="pa-2 ma-2" />
+        </v-col>
+        <v-col>
+          <cmatrixTerminal class="pa-2 ma-2" />
+        </v-col>
+      </v-row>
+
+      <v-row no-gutters>
+        <v-col>
+          <linksTerminal class="pa-2 ma-2" />
+        </v-col>
+        <v-col>
+          <neofetchTerminal class="pa-2 ma-2" />
+        </v-col>
+      </v-row>
+
+      <!-- <linksTerminal />
+      <neofetchTerminal /> -->
+    </v-main>
   </v-layout>
 </template>
 
 <script setup>
 import navBar from '../components/navBar.vue'
 import interactiveTerminal from '../components/interactiveTerminal.vue'
+import cmatrixTerminal from '../components/cmatrixTerminal.vue'
+import linksTerminal from '../components/linksTerminal.vue'
+import neofetchTerminal from '../components/neofetchTerminal.vue'
 // import homeInfo from '../components/homeInfo.vue'
 
 // const counterUp = ref('')
@@ -47,14 +71,10 @@ button {
   border-radius: 12px;
 }*/
 
-#navDrawer {
-  border-right: 5px;
-  border-style: solid;
-  border-color: rgb(0, 255, 42);
+.layout-container {
+  margin-top: 5px;
 }
 
-.layout-container {
-  width: 100vw;
-  height: 100vh;
+.interactiveTerminal {
 }
 </style>
