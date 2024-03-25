@@ -1,6 +1,6 @@
 <template>
   <div class="terminalInteractive rounded" ref="modal">
-    <div class="drag-bar" ref="box" @mousedown="mouseDownHandler"></div>
+    <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <pre id="titleASCII">
 
 ███████╗ ██████╗  ██████╗ ████████╗     ██████╗ ██╗   ██╗███╗   ██╗    ██████╗ ███████╗██╗   ██╗
@@ -55,41 +55,6 @@ document.addEventListener('mousedown', () => {
   const disableSelect = (e) => e.preventDefault()
   document.addEventListener('selectstart', disableSelect, { once: true })
 })
-
-// import { ref } from 'vue'
-
-// const modal = ref(null)
-
-// const mouseDownHandler = (event) => {
-//   const startX = event.clientX
-//   const startY = event.clientY
-//   let initialX = 0
-//   let initialY = 0
-
-//   if (modal.value) {
-//     const transform = window.getComputedStyle(modal.value).transform
-
-//     if (transform && transform !== 'none') {
-//       const transformValues = transform.match(/matrix.*\((.+)\)/)[1].split(', ')
-//       initialX = parseInt(transformValues[4])
-//       initialY = parseInt(transformValues[5])
-//     }
-//   }
-
-//   const moveHandler = (moveEvent) => {
-//     const dx = moveEvent.clientX - startX
-//     const dy = moveEvent.clientY - startY
-//     modal.value.style.transform = `translate(${initialX + dx}px, ${initialY + dy}px)`
-//   }
-
-//   const upHandler = () => {
-//     document.removeEventListener('mousemove', moveHandler)
-//     document.removeEventListener('mouseup', upHandler)
-//   }
-
-//   document.addEventListener('mousemove', moveHandler)
-//   document.addEventListener('mouseup', upHandler)
-// }
 </script>
 
 <style>
