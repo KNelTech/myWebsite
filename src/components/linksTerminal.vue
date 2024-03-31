@@ -1,15 +1,24 @@
 <template>
-  <!-- <div id="terminal">hi im kodi</div> -->
-  <v-sheet class="linksTerminal rounded"> test </v-sheet>
+  <div class="linksTerminal rounded" ref="modal">
+    <div class="drag-bar" @mousedown="mouseDownHandler"></div>
+    <div class="contentLinks pa-2">Links</div>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import useDraggable from '../js/dragable.js'
+const { modal, mouseDownHandler } = useDraggable()
+</script>
 
 <style>
 .linksTerminal {
   margin-bottom: 20px;
-  padding: 20px;
-  background: linear-gradient(0deg, #000, #272727);
+  text-align: left;
+  font-weight: bold;
+  margin-top: 5px;
+  background: black;
   height: 45vh;
+  position: absolute;
+  width: 49%;
 }
 </style>

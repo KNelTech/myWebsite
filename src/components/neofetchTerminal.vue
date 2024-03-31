@@ -1,15 +1,31 @@
 <template>
-  <!-- <div id="terminal">hi im kodi</div> -->
-  <v-sheet class="neofetchTerminal rounded"> neoFetch </v-sheet>
+  <div class="neofetchTerminal rounded" ref="modal">
+    <div class="drag-bar" @mousedown="mouseDownHandler"></div>
+    <div class="contentNeoFetch pa-2">neoFetch</div>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import useDraggable from '../js/dragable.js'
+
+const { modal, mouseDownHandler } = useDraggable()
+</script>
 
 <style>
 .neofetchTerminal {
   margin-bottom: 20px;
-  padding: 20px;
-  background: linear-gradient(0deg, #000, #272727);
+  text-align: left;
+  margin-top: 5px;
+  background: black;
   height: 45vh;
+  position: absolute;
+  width: 49%;
+}
+
+.drag-bar {
+  cursor: grab;
+  height: 20px;
+  width: 100%;
+  background-color: red;
 }
 </style>
