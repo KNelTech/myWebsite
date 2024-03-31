@@ -1,44 +1,69 @@
 <template>
   <v-layout>
-    <navBar />
+    <NavBar />
     <v-main class="layout-container">
-      <v-row no-gutters>
-        <v-col>
-          <interactiveTerminal class="ma-2" />
-        </v-col>
-        <v-col>
-          <cmatrixTerminal class="ma-2" />
-        </v-col>
-      </v-row>
-
-      <v-row no-gutters>
-        <v-col>
-          <linksTerminal class="ma-2" />
-        </v-col>
-        <v-col>
-          <neofetchTerminal class="ma-2" />
-        </v-col>
-      </v-row>
-
-      <!-- <linksTerminal />
-      <neofetchTerminal /> -->
+      <div class="terminals-row">
+        <div class="terminal-container ma-2">
+          <InteractiveTerminal ref="interactiveTerminal" class="terminal" />
+        </div>
+        <div class="terminal-container ma-2">
+          <CmatrixTerminal ref="cmatrixTerminal" class="terminal" />
+        </div>
+      </div>
+      <div class="terminals-row">
+        <div class="terminal-container ma-2">
+          <LinksTerminal ref="linksTerminal" class="terminal" />
+        </div>
+        <div class="terminal-container ma-2">
+          <NeofetchTerminal ref="neofetchTerminal" class="terminal" />
+        </div>
+      </div>
     </v-main>
   </v-layout>
 </template>
 
 <script setup>
-import navBar from '../components/navBar.vue'
-import interactiveTerminal from '../components/interactiveTerminal.vue'
-import cmatrixTerminal from '../components/cmatrixTerminal.vue'
-import linksTerminal from '../components/linksTerminal.vue'
-import neofetchTerminal from '../components/neofetchTerminal.vue'
+import NavBar from '../components/navBar.vue';
+import InteractiveTerminal from '../components/interactiveTerminal.vue';
+import CmatrixTerminal from '../components/cmatrixTerminal.vue';
+import LinksTerminal from '../components/linksTerminal.vue';
+import NeofetchTerminal from '../components/neofetchTerminal.vue';
 </script>
 
 <style>
 .layout-container {
-  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.interactiveTerminal {
+.terminals-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.terminal-container {
+  position: relative;
+  flex: 1 1 200px;
+  max-width: calc(50% - 4px);
+  height: 300px;
+}
+
+.terminal {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+}
+
+.terminal .drag-bar {
+  cursor: grab;
+  height: 20px;
+  background-color: red;
+  width: 100%;
 }
 </style>
