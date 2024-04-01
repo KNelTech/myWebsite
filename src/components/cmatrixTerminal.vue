@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal cmatrixTerminal rounded" ref="terminal">
+  <div class="terminal topRow cmatrixTerminal rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentCmatrix pa-2">This is where im gonna put the fuckin things</div>
   </div>
@@ -18,6 +18,8 @@ onMounted(() => {
 </script>
 
 <style>
+
+
 /* border shit i found
 .cmatrixTerminal {
   background: linear-gradient(0deg, #000, #272727);

@@ -3,18 +3,18 @@
     <NavBar />
     <v-main class="layout-container">
       <div class="terminals-row">
-        <div class="terminal-container ma-2">
+        <div class="terminal-container topRow ma-1">
           <InteractiveTerminal ref="interactiveTerminal" class="terminal" />
         </div>
-        <div class="terminal-container ma-2">
+        <div class="terminal-container topRow ma-1">
           <CmatrixTerminal ref="cmatrixTerminal" class="terminal" />
         </div>
       </div>
       <div class="terminals-row">
-        <div class="terminal-container ma-2">
+        <div class="terminal-container ma-1">
           <LinksTerminal ref="linksTerminal" class="terminal" />
         </div>
-        <div class="terminal-container ma-2">
+        <div class="terminal-container ma-1">
           <NeofetchTerminal ref="neofetchTerminal" class="terminal" />
         </div>
       </div>
@@ -47,7 +47,7 @@ import NeofetchTerminal from '../components/neofetchTerminal.vue';
   position: relative;
   flex: 1 1 200px;
   max-width: calc(50% - 4px);
-  height: 300px;
+  height: 46vh;
 }
 
 .terminal {
@@ -65,5 +65,11 @@ import NeofetchTerminal from '../components/neofetchTerminal.vue';
   height: 20px;
   background-color: red;
   width: 100%;
+  border-radius: 2px;
 }
+
+.topRow {
+  margin-top: 5px;
+}
+
 </style>

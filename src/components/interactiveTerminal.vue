@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal terminalInteractive rounded" ref="terminal">
+  <div class="terminal topRow terminalInteractive rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentInteractive pa-2">
       <pre id="titleASCII">
@@ -33,4 +33,5 @@ onMounted(() => {
   color: green;
   font-size: 8px;
 }
+
 </style>
