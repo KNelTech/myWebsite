@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar id="navBar" color="black">
+  <v-app-bar id="navBar">
     <v-icon id="terminalIcon" icon="mdi-console" size="50px"></v-icon>
     <div id="buttons">
       <v-tooltip text="home">
@@ -45,10 +45,8 @@
 
 #navBar {
   height: 70px;
-  border-bottom: 1px;
-  border-style: solid;
-  border-color: rgb(44, 44, 44);
   color: white;
+  background-color: rgba(0, 0, 0, 0.603);
 }
 
 #terminalIcon {

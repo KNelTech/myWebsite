@@ -2,6 +2,8 @@
   <v-layout>
     <NavBar />
     <v-main class="layout-container">
+      <div class="background"></div>
+
       <div class="terminals-row">
         <div class="terminal-container topRow ma-1">
           <InteractiveTerminal ref="interactiveTerminal" class="terminal" />
@@ -23,11 +25,11 @@
 </template>
 
 <script setup>
-import NavBar from '../components/navBar.vue';
-import InteractiveTerminal from '../components/interactiveTerminal.vue';
-import CmatrixTerminal from '../components/cmatrixTerminal.vue';
-import LinksTerminal from '../components/linksTerminal.vue';
-import NeofetchTerminal from '../components/neofetchTerminal.vue';
+import NavBar from '../components/navBar.vue'
+import InteractiveTerminal from '../components/interactiveTerminal.vue'
+import CmatrixTerminal from '../components/cmatrixTerminal.vue'
+import LinksTerminal from '../components/linksTerminal.vue'
+import NeofetchTerminal from '../components/neofetchTerminal.vue'
 </script>
 
 <style>
@@ -52,24 +54,34 @@ import NeofetchTerminal from '../components/neofetchTerminal.vue';
 
 .terminal {
   position: absolute;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.603);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: translate(0, 0);
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as desired */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .terminal .drag-bar {
   cursor: grab;
   height: 20px;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.432);
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px 3px 0 0;
 }
 
 .topRow {
   margin-top: 5px;
 }
 
+.background {
+  background-image: url('../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 105vh;
+  width: 100vw;
+}
 </style>
