@@ -2,7 +2,6 @@
   <v-layout>
     <NavBar />
     <v-main class="layout-container">
-      <div class="background"></div>
 
       <div class="terminals-row">
         <div class="terminal-container topRow ma-1">
@@ -76,12 +75,12 @@ import NeofetchTerminal from '../components/neofetchTerminal.vue'
   margin-top: 5px;
 }
 
-.background {
+#mainBody {
   background-image: url('../assets/background.png');
   background-size: cover;
   background-position: center;
   position: absolute;
-  height: 105vh;
+  height: 100vh;
   width: 100vw;
 }
 </style>
