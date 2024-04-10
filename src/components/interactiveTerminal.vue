@@ -25,7 +25,7 @@ const terminal = ref(null)
 onMounted(() => {
   const terminalElement = terminal.value
   const dragHandler = createDragHandler(terminalElement)
-  terminalElement.addEventListener('mousedown', dragHandler)
+  terminalElement.querySelector('.drag-bar').addEventListener('mousedown', dragHandler)
 })
 </script>
 
