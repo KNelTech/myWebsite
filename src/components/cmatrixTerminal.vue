@@ -1,5 +1,5 @@
 <template>
-  <div class="terminalComponent topRow cmatrixTerminal rounded" ref="terminal">
+  <div class="terminalComponent topRow rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentCmatrix pa-2">This is where im gonna put the fuckin things</div>
   </div>

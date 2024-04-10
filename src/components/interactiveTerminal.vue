@@ -1,5 +1,5 @@
 <template>
-  <div class="terminalComponent topRow terminalInteractive rounded" ref="terminal">
+  <div class="terminalComponent topRow rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentInteractive pa-2">
       <pre id="titleASCII">
