@@ -12,7 +12,7 @@
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚══════╝  ╚═══╝  
     </pre
       >
-      <div class="xtermcontainer" ref="terminalContainer"></div>
+      <div class="xtermcontainer" ref="terminalContainer"></div> <!-- this is where the xterminal will be, this is all youve done besides the installation -->
     </div>
   </div>
 </template>
