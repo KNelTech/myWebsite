@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal neofetchTerminal rounded" ref="terminal">
+  <div class="terminalComponent neofetchTerminal rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentNeoFetch pa-2">neoFetch</div>
   </div>

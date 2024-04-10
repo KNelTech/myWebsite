@@ -50,35 +50,34 @@
 //   return { modal, mouseDownHandler }
 // }
 
-
 // dragHandler.js
 
 export default function createDragHandler(element) {
-  let offsetX = 0;
-  let offsetY = 0;
+  let offsetX = 0
+  let offsetY = 0
 
   function handleMouseDown(event) {
-    offsetX = event.clientX - element.offsetLeft;
-    offsetY = event.clientY - element.offsetTop;
+    offsetX = event.clientX - element.offsetLeft
+    offsetY = event.clientY - element.offsetTop
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
   }
 
   function handleMouseMove(event) {
-    const newX = event.clientX - offsetX;
-    const newY = event.clientY - offsetY;
+    const newX = event.clientX - offsetX
+    const newY = event.clientY - offsetY
 
     // Update the position of the element
-    element.style.left = `${newX}px`;
-    element.style.top = `${newY}px`;
+    element.style.left = `${newX}px`
+    element.style.top = `${newY}px`
   }
 
   function handleMouseUp() {
-    document.removeEventListener('mousemove', handleMouseMove);
-    document.removeEventListener('mouseup', handleMouseUp);
+    document.removeEventListener('mousemove', handleMouseMove)
+    document.removeEventListener('mouseup', handleMouseUp)
   }
 
   // Return the mouse down handler
-  return handleMouseDown;
+  return handleMouseDown
 }

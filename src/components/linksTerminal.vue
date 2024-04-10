@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal linksTerminal rounded" ref="terminal">
+  <div class="terminalComponent linksTerminal rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentLinks pa-2">Links</div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal topRow terminalInteractive rounded" ref="terminal">
+  <div class="terminalComponent topRow terminalInteractive rounded" ref="terminal">
     <div class="drag-bar" @mousedown="mouseDownHandler"></div>
     <div class="contentInteractive pa-2">
       <pre id="titleASCII">
@@ -12,6 +12,7 @@
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚══════╝  ╚═══╝  
     </pre
       >
+      <div class="xtermcontainer" ref="terminalContainer"></div>
     </div>
   </div>
 </template>
@@ -33,5 +34,4 @@ onMounted(() => {
   color: green;
   font-size: 8px;
 }
-
 </style>

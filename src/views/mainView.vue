@@ -2,7 +2,6 @@
   <v-layout>
     <NavBar />
     <v-main class="layout-container">
-
       <div class="terminals-row">
         <div class="terminal-container topRow ma-1">
           <InteractiveTerminal ref="interactiveTerminal" class="terminal" />
@@ -51,7 +50,7 @@ import NeofetchTerminal from '../components/neofetchTerminal.vue'
   height: 46vh;
 }
 
-.terminal {
+.terminalComponent {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.603);
   top: 0;
@@ -63,7 +62,7 @@ import NeofetchTerminal from '../components/neofetchTerminal.vue'
   -webkit-backdrop-filter: blur(10px);
 }
 
-.terminal .drag-bar {
+.drag-bar {
   cursor: grab;
   height: 20px;
   background-color: rgba(0, 0, 0, 0.432);
