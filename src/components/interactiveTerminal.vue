@@ -10,9 +10,8 @@
 ██╔══╝  ██║   ██║██║   ██║   ██║       ██║   ██║██║   ██║██║╚██╗██║    ██║  ██║██╔══╝  ╚██╗ ██╔╝
 ██║     ╚██████╔╝╚██████╔╝   ██║       ╚██████╔╝╚██████╔╝██║ ╚████║    ██████╔╝███████╗ ╚████╔╝ 
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚══════╝  ╚═══╝  
-    </pre
-      >
-      <div class="xtermcontainer" ref="terminalContainer"></div> <!-- this is where the xterminal will be, this is all youve done besides the installation -->
+    </pre>
+      <xterm></xterm>
     </div>
   </div>
 </template>
@@ -22,10 +21,14 @@ import createDragHandler from '../js/dragable.js'
 import { ref, onMounted } from 'vue'
 const terminal = ref(null)
 
+
 onMounted(() => {
   const terminalElement = terminal.value
   const dragHandler = createDragHandler(terminalElement)
   terminalElement.querySelector('.drag-bar').addEventListener('mousedown', dragHandler)
+
+
+
 })
 </script>
 
