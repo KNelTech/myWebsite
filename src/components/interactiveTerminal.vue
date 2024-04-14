@@ -10,8 +10,10 @@
 ██╔══╝  ██║   ██║██║   ██║   ██║       ██║   ██║██║   ██║██║╚██╗██║    ██║  ██║██╔══╝  ╚██╗ ██╔╝
 ██║     ╚██████╔╝╚██████╔╝   ██║       ╚██████╔╝╚██████╔╝██║ ╚████║    ██████╔╝███████╗ ╚████╔╝ 
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚══════╝  ╚═══╝  
-    </pre>
+      </pre>
+      <!-- <div id="interactiveContainer"> -->
       <xterm></xterm>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -19,7 +21,7 @@
 <script setup>
 import createDragHandler from '../js/dragable.js'
 import { ref, onMounted } from 'vue'
-import xterm from './xterm.vue'
+import xterm from './xtermReactivity.vue'
 const terminal = ref(null)
 
 
@@ -27,9 +29,6 @@ onMounted(() => {
   const terminalElement = terminal.value
   const dragHandler = createDragHandler(terminalElement)
   terminalElement.querySelector('.drag-bar').addEventListener('mousedown', dragHandler)
-
-
-
 })
 </script>
 
