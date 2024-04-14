@@ -13,5 +13,8 @@ onMounted(() => {
     const terminal = new Terminal()
     terminal.open(terminalRef.value)
     terminal.writeln('raawrrr')
+    terminal.onData(data => {
+        terminal.writeln(data)
+    })
 })
 </script>

@@ -19,6 +19,7 @@
 <script setup>
 import createDragHandler from '../js/dragable.js'
 import { ref, onMounted } from 'vue'
+import xterm from './xterm.vue'
 const terminal = ref(null)
 
 
