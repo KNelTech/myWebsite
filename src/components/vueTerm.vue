@@ -3,14 +3,13 @@
 </template>
 
 <script setup>
-import VueCommand, { createStdout, createStderr, newDefaultHistory, createReset } from 'vue-command';
+import VueCommand, { createStdout, createStderr } from 'vue-command';
 import 'vue-command/dist/vue-command.css';
 import { ref } from 'vue';
 
 const hideBar = ref(true);
-const componentKey = ref(0); // Initialize the componentKey
-
-
+const componentKey = ref(0);
+const dispatchedQueries = ref([]);
 const commands = {
     "hello-world": () => {
         dispatchedQueries.value.push("hello-world");

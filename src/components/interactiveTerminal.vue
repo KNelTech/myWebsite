@@ -11,18 +11,24 @@
 ██║     ╚██████╔╝╚██████╔╝   ██║       ╚██████╔╝╚██████╔╝██║ ╚████║    ██████╔╝███████╗ ╚████╔╝ 
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚══════╝  ╚═══╝  
       </pre>
-      <vueTerm />
+      <div ref="outputRef" class="terminalContent"></div>
+      <v-text-field class="inputText" variant="text" label="remove this label" v-model.trim="inputText"
+        @keydown.enter="handleInput"></v-text-field>
     </div>
+    <!-- <vueTerm /> -->
   </div>
+
 </template>
 
 <script setup>
 import createDragHandler from '../js/dragable.js'
 import { ref, onMounted } from 'vue'
-import vueTerm from '../components/vueTerm.vue'
+import { spicyTerminal } from '../js/terminal.js'
+// import vueTerm from '../components/vueTerm.vue'
 
 const terminal = ref(null)
 
+const { inputText, outputRef, handleInput } = spicyTerminal()
 
 onMounted(() => {
   const terminalElement = terminal.value
