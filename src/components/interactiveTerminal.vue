@@ -11,9 +11,17 @@
 ██║     ╚██████╔╝╚██████╔╝   ██║       ╚██████╔╝╚██████╔╝██║ ╚████║    ██████╔╝███████╗ ╚████╔╝ 
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚══════╝  ╚═══╝  
       </pre>
-      <div ref="outputRef" class="terminalContent"></div>
-      <v-text-field class="inputText" variant="text" label="remove this label" v-model.trim="inputText"
-        @keydown.enter="handleInput"></v-text-field>
+      <div class="spicyTerminal" ref="scrollRef">
+        <div class="output" ref="outputRef">
+          <p v-for="(msg, index) in messages" :key="index" class="message">{{ msg }}</p>
+        </div>
+      </div>
+      <div class="inputContainer">
+        <div class="input">
+          <v-text-field type="text" class="inputText" color="green" autofocus hide-details variant="plain" active
+            v-model.trim="inputText" @keydown.enter="handleInput" aria-label="Input" prefix="user@root:~$" />
+        </div>
+      </div>
     </div>
     <!-- <vueTerm /> -->
   </div>
@@ -28,7 +36,10 @@ import { spicyTerminal } from '../js/terminal.js'
 
 const terminal = ref(null)
 
-const { inputText, outputRef, handleInput } = spicyTerminal()
+
+
+const { inputText, messages, outputRef, scrollRef, dialog, name, clearOutput, displayHelp, handleInput } =
+  spicyTerminal()
 
 onMounted(() => {
   const terminalElement = terminal.value
@@ -41,7 +52,24 @@ onMounted(() => {
 
 <style>
 #titleASCII {
-  color: green;
+  color: rgb(0, 180, 0);
   font-size: 8px;
+}
+
+.v-text-field__prefix__text {
+  color: rgb(102, 0, 219);
+  font-weight: 600;
+}
+
+.message {
+  color: rgb(102, 0, 219);
+  font-weight: 600;
+
+}
+
+/* not correct below */
+.v-field__input {
+  color: rgb(102, 0, 219);
+  font-weight: 600;
 }
 </style>
